@@ -26,16 +26,7 @@ class RecommendedModel {
   }
 }
 
-// List<RecommendedModel> recommendations = [];
-// re
-
 List<RecommendedModel> recommendations = recommendationsData.map((dynamic item) => RecommendedModel.fromJson(item as Map<String, dynamic>)).toList();
-
-
-// List<RecommendedModel> recommendations = recommendationsData
-//     .map((item) => RecommendedModel(name: item['name'], item['tagLine'],
-//     item['image'], item['images'], item['description'], item['price']))
-//     .toList();
 
 var recommendationsData = [
   {
