@@ -33,16 +33,16 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Container(
-                      height: 57.6,
-                      width: 57.6,
-                      padding: EdgeInsets.all(18),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(9.6),
-                        color: Color(0x080a0928),
-                      ),
-                      child: SvgPicture.asset('assets/svg/icon_drawer.svg'),
-                    ),
+                    // Container(
+                    //   height: 57.6,
+                    //   width: 57.6,
+                    //   padding: EdgeInsets.all(18),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(9.6),
+                    //     color: Color(0x080a0928),
+                    //   ),
+                    //   child: SvgPicture.asset('assets/svg/icon_drawer.svg'),
+                    // ),
                     Container(
                       height: 57.6,
                       width: 57.6,
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 48, left: 28.8),
                 child: Text(
-                  'Explore\nthe Nature',
+                  'Find Places\nto Explore',
                   style: GoogleFonts.playfairDisplay(
                       fontSize: 45.6, fontWeight: FontWeight.w700),
                 ),
@@ -187,11 +187,11 @@ class HomeScreen extends StatelessWidget {
               /// Dots Indicator
               /// Using SmoothPageIndicator Library
               Padding(
-                padding: EdgeInsets.only(left: 28.8, top: 28.8),
+                padding: const EdgeInsets.only(left: 28.8, top: 28.8),
                 child: SmoothPageIndicator(
                   controller: _pageController,
                   count: recommendations.length,
-                  effect: ExpandingDotsEffect(
+                  effect: const ExpandingDotsEffect(
                       activeDotColor: Color(0xFF8a8a8a),
                       dotColor: Color(0xFFababab),
                       dotHeight: 4.8,
@@ -201,103 +201,103 @@ class HomeScreen extends StatelessWidget {
               ),
 
               /// Text Widget for Popular Categories
-              Padding(
-                padding: EdgeInsets.only(top: 48, left: 28.8, right: 28.8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      width: MediaQuery.of(context).size.width*0.4,
-                      child: FittedBox(
-                        child: Text(
-                          'Popular Categories',
-                          style: GoogleFonts.playfairDisplay(
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xFF000000),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(width: MediaQuery.of(context).size.width*0.1,
-                      child: FittedBox(
-                        child: Text(
-                          'Show All ',
-                          style: GoogleFonts.lato(
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xFF8a8a8a),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.only(top: 48, left: 28.8, right: 28.8),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     crossAxisAlignment: CrossAxisAlignment.center,
+              //     children: <Widget>[
+              //       Container(
+              //         width: MediaQuery.of(context).size.width*0.4,
+              //         child: FittedBox(
+              //           child: Text(
+              //             'Popular Categories',
+              //             style: GoogleFonts.playfairDisplay(
+              //               fontWeight: FontWeight.w700,
+              //               color: Color(0xFF000000),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //       Container(width: MediaQuery.of(context).size.width*0.1,
+              //         child: FittedBox(
+              //           child: Text(
+              //             'Show All ',
+              //             style: GoogleFonts.lato(
+              //               fontWeight: FontWeight.w500,
+              //               color: Color(0xFF8a8a8a),
+              //             ),
+              //           ),
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
 
               /// ListView for Popular Categories Section
-              Container(
-                margin: EdgeInsets.only(top: 33.6),
-                height: 45.6,
-                child: ListView.builder(
-                  itemCount: populars.length,
-                  scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
-                  padding: EdgeInsets.only(left: 28.8, right: 9.6),
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: EdgeInsets.only(right: 19.2),
-                      height: 45.6,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(9.6),
-                        color: Color(populars[index].color),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          SizedBox(
-                            width: 19.2,
-                          ),
-                          Image.asset(
-                            populars[index].image,
-                            height: 16.8,
-                          ),
-                          SizedBox(
-                            width: 19.2,
-                          )
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ),
+              // Container(
+              //   margin: EdgeInsets.only(top: 33.6),
+              //   height: 45.6,
+              //   child: ListView.builder(
+              //     itemCount: populars.length,
+              //     scrollDirection: Axis.horizontal,
+              //     physics: BouncingScrollPhysics(),
+              //     padding: EdgeInsets.only(left: 28.8, right: 9.6),
+              //     itemBuilder: (context, index) {
+              //       return Container(
+              //         margin: EdgeInsets.only(right: 19.2),
+              //         height: 45.6,
+              //         decoration: BoxDecoration(
+              //           borderRadius: BorderRadius.circular(9.6),
+              //           color: Color(populars[index].color),
+              //         ),
+              //         child: Row(
+              //           crossAxisAlignment: CrossAxisAlignment.center,
+              //           mainAxisAlignment: MainAxisAlignment.center,
+              //           children: <Widget>[
+              //             SizedBox(
+              //               width: 19.2,
+              //             ),
+              //             Image.asset(
+              //               populars[index].image,
+              //               height: 16.8,
+              //             ),
+              //             SizedBox(
+              //               width: 19.2,
+              //             )
+              //           ],
+              //         ),
+              //       );
+              //     },
+              //   ),
+              // ),
 
               /// ListView for Beach Section
-              Container(
-                margin: EdgeInsets.only(top: 28.8, bottom: 16.8),
-                height: 124.8,
-                child: ListView.builder(
-                  itemCount: beaches.length,
-                  padding: EdgeInsets.only(left: 28.8, right: 12),
-                  scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    return Container(
-                      height: 124.8,
-                      width: 188.4,
-                      margin: EdgeInsets.only(right: 16.8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(9.6),
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image:
-                              CachedNetworkImageProvider(beaches[index].image),
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              )
+              // Container(
+              //   margin: EdgeInsets.only(top: 28.8, bottom: 16.8),
+              //   height: 124.8,
+              //   child: ListView.builder(
+              //     itemCount: beaches.length,
+              //     padding: EdgeInsets.only(left: 28.8, right: 12),
+              //     scrollDirection: Axis.horizontal,
+              //     physics: BouncingScrollPhysics(),
+              //     itemBuilder: (context, index) {
+              //       return Container(
+              //         height: 124.8,
+              //         width: 188.4,
+              //         margin: EdgeInsets.only(right: 16.8),
+              //         decoration: BoxDecoration(
+              //           borderRadius: BorderRadius.circular(9.6),
+              //           image: DecorationImage(
+              //             fit: BoxFit.cover,
+              //             image:
+              //                 CachedNetworkImageProvider(beaches[index].image),
+              //           ),
+              //         ),
+              //       );
+              //     },
+              //   ),
+              // )
             ],
           ),
         ),

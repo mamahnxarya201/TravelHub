@@ -7,7 +7,6 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class SelectedPlaceScreen extends StatelessWidget {
   final _pageController = PageController();
-
   final RecommendedModel recommendedModel;
 
   SelectedPlaceScreen({required this.recommendedModel});
@@ -37,6 +36,8 @@ class SelectedPlaceScreen extends StatelessWidget {
             ),
 
             /// Custom Button
+            /// Not following OS standart a little bit dangerous
+            /// Fuck the design system police !
             SafeArea(
               child: Container(
                 height: 57.6,
@@ -80,7 +81,7 @@ class SelectedPlaceScreen extends StatelessWidget {
                     SmoothPageIndicator(
                       controller: _pageController,
                       count: recommendedModel.images.length,
-                      effect: ExpandingDotsEffect(
+                      effect: const ExpandingDotsEffect(
                           activeDotColor: Color(0xFFFFFFFF),
                           dotColor: Color(0xFFababab),
                           dotHeight: 4.8,

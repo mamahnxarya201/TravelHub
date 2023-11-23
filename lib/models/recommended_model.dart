@@ -98,8 +98,8 @@ var recommendationsData = [
       "https://images.unsplash.com/photo-1566559532512-004a6df74db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
     ],
     "description":
-    "Yogyakarta is a bustling town of some half a million people and the most popular tourist destination on Java, largely thanks to its proximity to the temples of Borobudur and Prambanan.",
-    "price": 110
+    "thanks to its proximity to the temples of Borobudur and Prambanan. Makes Yogyakarta and unskipabble tourist destination",
+    "price": 150
   },
   {
     "name": "Wiang Kum Kam, Thailand",
