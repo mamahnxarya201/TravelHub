@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:travel_app/models/beach_model.dart';
 import 'package:travel_app/models/popular_model.dart';
 import 'package:travel_app/models/recommended_model.dart';
 import 'package:travel_app/screens/selected_place_screen.dart';
